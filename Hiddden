@@ -1,0 +1,35 @@
+@IBAction func textEntered(_ sender: UITextField) {
+        print("dfghj")
+        if(self.CoursetextOL.state.isEmpty){
+            courseCheckbtn.isHidden = true
+        }
+        else{
+            courseCheckbtn.isHidden = false
+        }
+    }
+    
+    
+    @IBAction func textEntered2(_ sender: UITextField) {
+        print("qwe")
+        if(self.CoursetextOL.state.isEmpty){
+            courseCheckbtn.isHidden = true
+        }
+        else{
+            courseCheckbtn.isHidden = false
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let transition = segue.identifier
+
+            if transition == "ResultSegue"{
+                let destination = segue.destination as! ResultViewController
+                destination.destImg = img
+            }
+
+        }
+
+    
+}
+
